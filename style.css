@@ -1,0 +1,268 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    padding-top: 80px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #433878;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.hero {
+    background: url('1.jpg') no-repeat center center/cover;
+    height: 70vh;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-overlay h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.button {
+    background: #e63946;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #d62839;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px); /* Podiže dugme */
+}
+
+.about, .courses, .gallery, .contact {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.course-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Omogućavanje preloma */
+}
+
+.course-item {
+    flex: 1 1 30%; /* Fleksibilna širina */
+    max-width: 300px; /* Maksimalna širina */
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px; /* Razmak između kurseva */
+}
+
+.gallery {
+    padding: 60px 20px; /* Povećan padding */
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Povećana minimalna širina */
+    gap: 20px; /* Povećan razmak između slika */
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s; /* Dodaj tranziciju */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Omogućavanje preloma */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px; 
+    margin: 10px;
+    text-align: center; /* Centriranje teksta */
+    color: white;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px; 
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section li {
+    display: inline;
+    margin-right: 10px;
+    text-align: center; /* Centriranje teksta */
+    margin: 10px 0; /* Veći razmak između sekcija */
+}
+
+.footer-section i {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-section i:hover {
+    color: #433878;
+    transform: scale(1.2);
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 0; 
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-overlay h1 {
+        font-size: 24px;
+    }
+
+    .course-list {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .course-item {
+        width: 80%; 
+        margin-bottom: 20px; 
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .footer-section {
+        text-align: center; 
+}
+
+@media (max-width: 480px) {
+    .hero-overlay h1 {
+        font-size: 20px; 
+    }
+
+    .button {
+        padding: 8px 16px; 
+    }
+
+    .course-item {
+        width: 90%; 
+
+    .gallery-grid {
+        grid-template-columns: 1fr; 
+        }
+    }
+}
